@@ -28,12 +28,12 @@ class TodoList
   end
 
   def add(item)
-    raise TypeError, "Can only add Todo objects" unless item_verified?(item)
+    raise TypeError, "Can only add Todo objects" unless item.instance_of?(Todo)
     todos << item
   end
 
   def to_s
-    todos
+    "#{todos}"
   end
 end
 
